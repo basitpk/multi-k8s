@@ -11,7 +11,7 @@ spec:
     - http:
         paths:
           - path: "/?(.*)"
-            pathType: Prefix
+            pathType: ImplementationSpecific
             backend:
               service:
                 # Service to Client IP
@@ -19,7 +19,7 @@ spec:
                 port:
                   number: 3000
           - path: "/api/?(.*)"
-            pathType: Prefix
+            pathType: ImplementationSpecific
             backend:
               service:
                 # Service to Server IP
